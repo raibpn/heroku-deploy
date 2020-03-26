@@ -5,10 +5,10 @@ const path = require("path");
 const app = express();
 
 // Serve only the static files form the angularapp directory
-app.use(express.static(__dirname + "/everest-services"));
+app.use(express.static('.dist/everest-services'));
 
-app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname + "everest-services/index.html"));
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + './dist/everest-services/index.html'));
 });
 console.log("Logging directory path");
 console.log("Logging directory path" + __dirname);
