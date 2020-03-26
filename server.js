@@ -7,8 +7,8 @@ const app = express();
 // Serve only the static files form the angularapp directory
 app.use(express.static("./dist/heroku-deploy"));
 
-app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./index.html"));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 console.log("Logging directory path");
 console.log("Logging directory path" + __dirname);
