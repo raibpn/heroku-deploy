@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static("./dist/heroku-deploy"));
 
 app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./dist/heroku-deploy/index.html"));
+  res.sendFile(path.join(__dirname, "./index.html"));
 });
 console.log("Logging directory path");
 console.log("Logging directory path" + __dirname);
